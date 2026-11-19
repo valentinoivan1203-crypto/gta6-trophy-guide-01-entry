@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI 55-trophy tracker</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="sub">Every trophy with its official name, description and grade, a guide in our own words with its sources, a roadmap to the Platinum, and a tracker that saves in your browser. Works offline — nothing leaves your machine.</p>
+  </div>
+  <div class="progress-card" id="progress-card">
+    <p class="progress-count"><span id="earned-count">0</span> / <span id="total-count">55</span> earned</p>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    <p class="progress-pct" id="progress-pct">0% to the Platinum</p>
+    <p class="progress-note" id="progress-note">Tick a trophy off and it stays ticked, even after you close the page.</p>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Tracker controls">
+  <label class="control">Kind
+    <select id="kind-filter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="activities">Activities</option>
+      <option value="robbery">Robbery</option>
+      <option value="exploration">Exploration</option>
+      <option value="completion">Completion</option>
+    </select>
+  </label>
+  <label class="control">Grade
+    <select id="grade-filter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="control">Search
+    <input id="search" type="search" placeholder="Name or description…" autocomplete="off">
+  </label>
+  <label class="control check"><input id="hide-earned" type="checkbox"> Hide earned</label>
+  <label class="control check"><input id="spoiler" type="checkbox"> Hide story spoilers</label>
+  <button id="export" type="button">Export progress</button>
+  <label class="import-btn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+</nav>
+
+<section class="roadmap" id="roadmap" aria-label="Roadmap to the Platinum">
+  <h2>Roadmap to the Platinum</h2>
+  <p class="roadmap-intro">Six stages, in order. The story first — and the one trophy you can miss — then the side strands, the activities, the robberies, the collectibles, and the 100% cleanup that ends with the Platinum. About 200 hours in all, on one playthrough (PowerPyx).</p>
+  <ol class="roadmap-stages" id="roadmap-stages"></ol>
+</section>
+
+<main>
+  <h2 id="list-heading">All trophies <span id="shown-count"></span></h2>
+  <p class="list-note">Names and descriptions are the official ones, as PlayStation publishes them. Each guide is written for this guide and cites where its facts come from — a cited guide beats an uncited one, however detailed.</p>
+  <div class="trophy-list" id="trophy-list"></div>
+  <p class="empty" id="empty" hidden>No trophies match these filters. Clear the search or pick another kind.</p>
+</main>
+
+<footer>
+  <p>Sources: the official trophy names, descriptions and grades as listed by Exophase and PSNProfiles; the guides cite PowerPyx, GTABase and FullSweep beside each trophy. An original guide — no Rockstar logo, artwork or box art. Progress is stored only in your browser (localStorage); export and import move it as a file you own.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
